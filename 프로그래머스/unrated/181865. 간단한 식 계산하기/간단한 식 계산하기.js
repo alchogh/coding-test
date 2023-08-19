@@ -1,10 +1,10 @@
 function solution(binomial) {
-  const array = binomial.split(' ')
-   if(array[1]=== '+'){
-      return (+array[0])+ (+array[2])
-   } else if(array[1]==='-'){
-      return array[0]-array[2]
+  const [first, operator, second ] = binomial.split(' ')
+   if(operator=== '+'){
+      return (+first)+ (+second)
+   } else if(operator==='-'){
+      return first-second
    } else {
-      return array[0] * array[2]
+      return first * second
    }
 }
