@@ -1,13 +1,14 @@
 function solution(n) {
     const result = []
-    while(n !== 1){
-        result.push(n)
+     result.unshift(n)
+    while(n!==1){
         if(n%2===0){
-            n /=2
-        } else {
-            n = 3* n +1
+            n /= 2
+        } else{
+            n = 3 * n + 1
         }
+        result.push(n)
+        
     }
-    result.push(1)
     return result
 }
