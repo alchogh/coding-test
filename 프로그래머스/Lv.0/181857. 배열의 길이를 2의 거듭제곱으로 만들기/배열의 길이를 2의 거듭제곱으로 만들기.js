@@ -1,6 +1,16 @@
 function solution(arr) {
-    while (!((arr.length & (arr.length - 1)) === 0 && arr.length !== 0)) {
-        arr.push(0);
+    const len = arr.length
+    let i = 0
+    
+    while(true) {
+        const num = 2**i
+        if(len > num){
+            i++
+        } else {
+            for(let i = 0 ; i < num - len ; i++){
+                arr.push(0)
+            }
+            return arr
+        }
     }
-    return arr;
 }
