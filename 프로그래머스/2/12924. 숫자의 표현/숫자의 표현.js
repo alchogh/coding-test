@@ -1,17 +1,33 @@
-function solution(n) {
-    let count = 0; // 연속된 수열을 찾은 경우의 수를 저장할 변수
-    for (let start = 1; start <= n; start++) {
-        let sum = 0;
-        for (let num = start; sum < n; num++) {
-            sum += num; // start에서 시작하여 num을 계속 더해감
-            if (sum == n) {
-                count++;
-                break; 
+// function solution(n){
+//     let count = 0 
+//     for(let s=1 ; s<=n ; s++){
+//         let sum = 0 
+//         for(let num=s ; sum<n ; num++){
+//             sum += num
+//             if(sum===n){
+//                 count ++
+//                 break;
+//             }
+//         }
+//     }
+//     return count
+// }
+
+function solution(n){
+    let count = 0
+    for(let s=1 ; s<=n ; s++){
+        let sum = 0 
+        for(let num = s ; sum<=n ; num++){
+            sum += num 
+            if(sum===n){
+                count ++
+                break;
             }
         }
     }
-    return count;
+    return count
 }
+
 
 
 // function solution(n) {
