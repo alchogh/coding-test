@@ -1,8 +1,4 @@
 function solution(strings, n) {
-    return strings.sort((a, b) => {
-        if (a[n] === b[n]) {
-            return a.localeCompare(b);
-        }
-        return a[n].localeCompare(b[n]);
-    });
+  const idx = [...strings].map((v,i)=> v[n])
+  return idx.findIndex(idx.sort())
 }
